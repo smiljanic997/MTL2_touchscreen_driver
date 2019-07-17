@@ -221,7 +221,7 @@ static int __exit mtl2_touchscreen_exit(void)
 	printk(KERN_CONT "Removing module.");
 	
 	disable_irq(mtl2_irq);
-    gpio_free(INT_GPIO_PIN);
+    	gpio_free(INT_GPIO_PIN);
 	input_unregister_device(data.input);
 	i2c_unregister_device(data.client);
 	i2c_del_driver(&mtl2_touchscreen_driver);
